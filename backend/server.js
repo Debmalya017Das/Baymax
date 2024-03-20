@@ -8,7 +8,7 @@ require("dotenv").config()
 const PORT = process.env.PORT || 3000
 
 const corsOptions = {
-    origin: "http://localhost:5502",
+    origin: "http://localhost:5500/Hackforge/index.html",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true
 }

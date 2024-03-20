@@ -10,13 +10,19 @@ exports.medical = async (req,res) => {
         console.log(Medicines)
         console.log(Complications)
         console.log(req.body)
-        //create entry for user
-        let med = await Medical.create({
-            Medicines, 
-            Complications,
-        })
 
-        return res.status(200).json({
+        const med = await Medical({
+            Complications, Medicines
+        })
+        //create entry for user
+        // let med = await Medical.create({
+        //     Medicines, 
+        //     Complications,
+        // })
+
+        const med_new = await med.save()
+
+        res.status(200).json({
             success: true,
             message: "Medical history saved",
             data: med,

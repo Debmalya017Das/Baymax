@@ -188,11 +188,11 @@ https://templatemo.com/tm-590-topic-listing
                                                 </div id="101">
                                                 <br>
                                             
-                                            <p class="mb-0">Enter your medications : </p>
+                                            <p class="mb-1">Enter your medications : </p>
                                         
                                                 <div id="inputContainer2">
                                                     <div class="input-group2">
-                                                        <input type="text" style="padding-top: 10px;" name="medInput" placeholder="Medicines" required>
+                                                        <input type="text" style="padding-top: 12px;" name="medInput" placeholder="Medicines" required>
                                                         
                                                         <button type="button" onclick="addMedicine()">+</button>
                                                         
@@ -530,7 +530,7 @@ https://templatemo.com/tm-590-topic-listing
                     console.log(data);
 
                     //entry to database and connecting to backend
-                    const URL = "http://localhost:3000/bay/medical"
+                    const URL = "http://localhost:27017/baymax/medical"
                             const res = await fetch(URL, {
                                 method: "POST",
                                 headers: {
